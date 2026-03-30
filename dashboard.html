@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | LeadGrow Active Portal</title>
+  <meta name="description" content="Manage your coaching metrics, book sessions, and track professional growth.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body style="overflow: hidden;"> <!-- Prevents unnecessary body scrolling since dashboard has internal scroll -->
+
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">W</div>
+          <span>LeadGrow</span>
+        </a>
+      </div>
+      
+      <div class="sidebar-nav">
+        <a href="#" class="sidebar-link active">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          Overview
+        </a>
+        <a href="#" class="sidebar-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+          Book Sessions
+        </a>
+        <a href="#" class="sidebar-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Resource Library
+        </a>
+        <a href="#" class="sidebar-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+          My Resume
+        </a>
+        <a href="#" class="sidebar-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          Settings
+        </a>
+      </div>
+      
+      <!-- Bottom Sidebar Items -->
+      <div class="sidebar-footer">
+        <a href="index.html" class="sidebar-link" style="color: var(--error-color);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      
+      <!-- Top Dashboard Header -->
+      <header class="dashboard-header">
+        <div>
+          <!-- Nav Toggles Specific to Dashboard -->
+          <div class="nav-toggles">
+            <button class="icon-btn theme-toggle" aria-label="Toggle Theme">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+            <button class="icon-btn rtl-toggle" aria-label="Toggle Direction">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+            </button>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <!-- Notifications -->
+          <button class="icon-btn" style="position: relative;" aria-label="Notifications">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+            <span style="position: absolute; top: -5px; right: -5px; width: 12px; height: 12px; background-color: var(--error-color); border-radius: 50%; border: 2px solid var(--surface-color);"></span>
+          </button>
+          
+          <!-- Profile Badge -->
+          <div class="user-profile">
+            <div class="avatar">SJ</div>
+            <div class="user-info">
+              <div style="font-size: 0.875rem; color: var(--text-primary);">Sarah Jenkins</div>
+              <div style="font-size: 0.75rem; color: var(--text-secondary);">User Dashboard</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Scrollable Dashboard Content -->
+      <div class="dashboard-content">
+        <div style="margin-bottom: 2rem;">
+          <h1 style="margin-bottom: 0.5rem; font-size: 2rem;">Welcome Back, Sarah!</h1>
+          <p class="text-secondary">Here's your current growth overview and upcoming coaching schedule.</p>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="grid grid-3" style="gap: 1.5rem; margin-bottom: 2rem;">
+          <div class="card" style="padding: 1.5rem;">
+            <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+              <h4 style="margin: 0; color: var(--text-secondary);">Sessions Completed</h4>
+              <div class="icon-btn" style="width: 32px; height: 32px; background-color: rgba(94, 35, 157, 0.1); color: var(--primary-color);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+            <div style="font-size: 2rem; font-weight: 700;">12</div>
+            <div style="font-size: 0.875rem; color: var(--success-color); margin-top: 0.5rem;">+2 this month</div>
+          </div>
+          
+          <div class="card" style="padding: 1.5rem;">
+            <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+              <h4 style="margin: 0; color: var(--text-secondary);">Action Items</h4>
+              <div class="icon-btn" style="width: 32px; height: 32px; background-color: rgba(245, 166, 35, 0.1); color: var(--secondary-color);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <div style="font-size: 2rem; font-weight: 700;">4</div>
+            <div style="font-size: 0.875rem; color: var(--error-color); margin-top: 0.5rem;">2 pending review</div>
+          </div>
+
+          <div class="card" style="padding: 1.5rem;">
+            <div class="flex justify-between items-center" style="margin-bottom: 1rem;">
+              <h4 style="margin: 0; color: var(--text-secondary);">Current Plan</h4>
+              <div class="icon-btn" style="width: 32px; height: 32px; background-color: rgba(16, 185, 129, 0.1); color: var(--success-color);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 700;">Accelerate Plan</div>
+            <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.5rem;">Renews in 15 days</div>
+          </div>
+        </div>
+
+        <!-- Secondary Tracking Grid -->
+        <div class="card" style="margin-bottom: 2rem; padding: 1.5rem;">
+          <h3 style="margin-bottom: 1rem;">Current Goal Progress: VP Promotion</h3>
+          <p class="text-secondary" style="margin-bottom: 1rem;">Based on your established OKRs, you are currently pacing ahead of schedule for your end-of-year review placement.</p>
+          <div style="display: flex; justify-content: space-between; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">
+            <span>Phase 2: Internal Networking</span>
+            <span style="color: var(--primary-color);">65%</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 65%;"></div>
+          </div>
+          
+          <div class="grid grid-2" style="margin-top: 1.5rem; gap: 1rem;">
+            <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--border-radius);">
+              <div style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Skill Gap Auditing</div>
+              <div class="progress-container"><div class="progress-bar success" style="width: 100%;"></div></div>
+            </div>
+            <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--border-radius);">
+              <div style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.25rem;">Board Pitch Presentation</div>
+              <div class="progress-container"><div class="progress-bar warning" style="width: 30%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Split section -->
+        <div class="grid grid-2" style="gap: 1.5rem;">
+          
+          <!-- Upcoming Sessions -->
+          <div class="card" style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Upcoming Sessions</h3>
+            
+            <div style="display: flex; align-items: flex-start; gap: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1rem;">
+              <div style="background-color: var(--primary-light); color: white; border-radius: 8px; padding: 0.5rem; text-align: center; min-width: 60px;">
+                <div style="font-size: 0.875rem; text-transform: uppercase;">Oct</div>
+                <div style="font-size: 1.25rem; font-weight: 700;">24</div>
+              </div>
+              <div style="flex: 1;">
+                <h4 style="margin: 0 0 0.25rem 0;">1:1 Promotion Strategy Alignment</h4>
+                <div class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.5rem;">10:00 AM - 11:00 AM (EST) via Zoom</div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Join Call</button>
+                  <button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Reschedule</button>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+              <div style="background-color: var(--surface-alt); color: var(--text-primary); border-radius: 8px; padding: 0.5rem; text-align: center; min-width: 60px;">
+                <div style="font-size: 0.875rem; text-transform: uppercase;">Nov</div>
+                <div style="font-size: 1.25rem; font-weight: 700;">02</div>
+              </div>
+              <div style="flex: 1;">
+                <h4 style="margin: 0 0 0.25rem 0;">Quarterly Mastermind Group Review</h4>
+                <div class="text-secondary" style="font-size: 0.875rem; margin-bottom: 0.5rem;">3:00 PM - 5:00 PM (EST) via Zoom</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Items -->
+          <div class="card" style="padding: 1.5rem;">
+            <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">My Action Items</h3>
+            
+            <label class="checkbox-wrap" style="align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--surface-alt); padding-bottom: 1rem;">
+              <input type="checkbox" style="margin-top: 0.25rem;">
+              <div>
+                <div style="font-weight: 500;">Complete "Executive Presence" Auditing Survey</div>
+                <div class="text-secondary" style="font-size: 0.875rem;">Due by Oct 20th</div>
+              </div>
+            </label>
+
+            <label class="checkbox-wrap" style="align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--surface-alt); padding-bottom: 1rem;">
+              <input type="checkbox" style="margin-top: 0.25rem;">
+              <div>
+                <div style="font-weight: 500;">Draft new LinkedIn Bio following session framework</div>
+                <div class="text-secondary" style="font-size: 0.875rem;">Due by Oct 23rd</div>
+              </div>
+            </label>
+
+            <label class="checkbox-wrap" style="align-items: flex-start; margin-bottom: 1rem;">
+              <input type="checkbox" checked style="margin-top: 0.25rem;">
+              <div>
+                <div style="font-weight: 500; text-decoration: line-through; color: var(--text-secondary);">Sign Client Agreemant Form Update</div>
+                <div class="text-secondary" style="font-size: 0.875rem;">Completed Oct 10th</div>
+              </div>
+            </label>
+            
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
