@@ -1107,7 +1107,14 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 0 1rem;
+    height: 70px;
+  }
 }
 
 .header-actions {
@@ -1142,18 +1149,78 @@ h6 {
   flex: 1;
 }
 
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+}
+
+.dashboard-toggle {
+  display: none;
+  margin-right: 1.5rem;
+}
+
+[dir="rtl"] .dashboard-toggle {
+  margin-right: 0;
+  margin-left: 1.5rem;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 992px) {
+  .dashboard-toggle {
+    display: flex;
+  }
+
   .sidebar {
     position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
     transform: translateX(-100%);
     z-index: 1000;
   }
 
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
   [dir="rtl"] .sidebar {
+    left: auto;
+    right: 0;
     transform: translateX(100%);
   }
 
-  /* Would need JS toggles for mobile sidebar ideally */
+  [dir="rtl"] .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .dashboard-header {
+    padding: 0 1.5rem;
+  }
 }
 
 /* Feature/Coach Story Image */

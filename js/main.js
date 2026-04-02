@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initRtlToggle();
   initMobileMenu();
+  initDashboardSidebar();
   initPasswordToggles();
 });
 
@@ -113,6 +114,36 @@ function initMobileMenu() {
   menuBtn.addEventListener('click', openMenu);
   closeBtn?.addEventListener('click', closeMenu);
   mobileOverlay.addEventListener('click', closeMenu);
+}
+
+// -------------------------------------------------------------------------
+// Dashboard Sidebar Toggle (Mobile)
+// -------------------------------------------------------------------------
+function initDashboardSidebar() {
+  const toggleBtn = document.querySelector('.dashboard-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.sidebar-overlay');
+  
+  if (!toggleBtn || !sidebar || !overlay) return;
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  toggleBtn.addEventListener('click', openSidebar);
+  overlay.addEventListener('click', closeSidebar);
+  
+  // Close sidebar on link click (mobile)
+  const sidebarLinks = sidebar.querySelectorAll('.sidebar-link');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', closeSidebar);
+  });
 }
 
 // -------------------------------------------------------------------------
