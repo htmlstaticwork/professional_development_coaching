@@ -1003,6 +1003,35 @@ h6 {
   }
 }
 
+/* Calendar Styles (Dashboard) */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.calendar-day {
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+@media (max-width: 600px) {
+  .calendar-grid {
+    gap: 0.25rem;
+  }
+  .calendar-day {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .calendar-day {
+    padding: 0.35rem;
+  }
+}
+
 /* Authentication Layout (Login & Signup) */
 .auth-page {
   min-height: 100vh;
@@ -1111,8 +1140,6 @@ h6 {
 
 .sidebar-nav {
   padding: 1rem;
-  flex: 1;
-  overflow-y: auto;
 }
 
 .sidebar-link {
@@ -1158,6 +1185,24 @@ h6 {
   padding: 0 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .dashboard-header {
+    height: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    padding: 1rem;
+  }
+}
+
 @media (max-width: 600px) {
   .dashboard-header {
     padding: 0 1rem;
@@ -1169,6 +1214,15 @@ h6 {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .header-actions {
+    gap: 0.75rem;
+  }
+  .user-profile .user-info {
+    display: none;
+  }
 }
 
 .user-profile {
