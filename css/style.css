@@ -1263,6 +1263,25 @@ h6 {
   }
 }
 
+/* Dashboard Grid Overrides */
+@media (max-width: 992px) {
+  .dashboard-content .grid-2,
+  .dashboard-content .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+}
+
+.grid-span-full {
+  grid-column: 1 / -1 !important;
+}
+
+@media (max-width: 992px) {
+  .grid-span-full {
+    grid-column: auto !important;
+  }
+}
+
 .dashboard-toggle {
   display: none;
   margin-right: 1.5rem;
