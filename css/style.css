@@ -90,14 +90,14 @@ body.with-bg-image::before {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.50;
-  /* Highly visible */
+  opacity: 0.12;
+  /* Reduced from 0.50 for high readability */
   z-index: -10;
   pointer-events: none;
 }
 
 [data-theme="dark"] body.with-bg-image::before {
-  opacity: 0.15;
+  opacity: 0.10;
 }
 
 /* Remove solid blocking backgrounds so the image shines through */

@@ -60,9 +60,22 @@
       text-align: center;
     }
 
+    @media (max-width: 767px) {
+      .slide:first-child {
+        margin-left: 10%;
+      }
+      .slide:last-child {
+        margin-right: 10%;
+      }
+    }
+
     @media (min-width: 768px) {
+      .slider {
+        justify-content: center;
+      }
       .slide {
         flex: 0 0 45%;
+        max-width: 450px;
       }
     }
   </style>
